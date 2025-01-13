@@ -1,0 +1,267 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.5 cm,
+    bottom=1.5 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Ansh Mehta's CV},
+    pdfauthor={Ansh Mehta},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.3 cm
+}{
+    0.2 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Ansh Mehta
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Mumbai, Maharashtra}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{mailto:anshkapilmehta@gmail.com}{anshkapilmehta@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{tel:+91-9930519079}{9930519079}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{https://www.linkedin.com/in/anshmehta/}{linkedin.com/in/anshmehta}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{https://github.com/anshmehta7x}{github.com/anshmehta7x}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    \section{Education}
+
+        \begin{twocolentry}{
+            Sep 2022 - Jul 2026 
+        }
+            \textbf{Vellore Institute of Technology}, B.Tech in Computer Science and Engineering\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item GPA: 9.03/10
+                \item Technical Head at IEEE-Computer Society
+                \item \textbf{Relevant Coursework:} Structured and Object-Oriented Programming, Data Structures and Algorithms, Computer Architecture and Organization, Operating Systems, Database Management Systems, Computer Networks 
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Technologies}
+
+        \begin{onecolentry}
+            \textbf{Languages:} Python, C , C++, Java, JavaScript, TypeScript, HTML, CSS, Solidity \end{onecolentry}
+
+        \begin{onecolentry}
+            \textbf{Developer Tools:} Git, Docker, Postman, Kaggle, Remix IDE \end{onecolentry}
+        
+        \begin{onecolentry}
+            \textbf{Frameworks:} NextJS, TailwindCSS, Three.js, Node.js, FastAPI ,Flask, OpenCV, Foundry  
+        \end{onecolentry}
+
+        \begin{onecolentry}
+            \textbf{Cloud:} AWS, GCP, Firebase \end{onecolentry}
+        
+        \begin{onecolentry}
+            \textbf{ML \& Data:} SQL, MongoDB, Numpy, TensorFlow, R, matplotlib \end{onecolentry}
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+            June 2024 \textendash July 2024 
+        }
+            \textbf{Software Developer Intern}, XDC Network  \textendash  Dubai, UAE\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Collaborated with cross-functional teams to design and deploy decentralized applications (dApps) using Solidity-based smart contracts. 
+                \item Architected and executed comprehensive testing protocols for smart contracts on Ethereum testnets with Hardhat and Foundry, ensuring flawless security and functionality 
+                \item Researched decentralized finance (DeFi) protocols, acquiring expertise in yield farming and liquidity pools. 
+
+            \end{highlights}
+        \end{onecolentry}
+
+\section{Projects}
+        
+        \begin{twocolentry}{
+            \href{https://github.com/anshmehta7x/mailman}{Github Link}
+        }
+            \textbf{Mailman CLI}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a command-line interface version of Postman using C++, providing a lightweight alternative for API testing and development
+                \item Engineered a libcurl wrapper with features including fully customizable HTTP requests, workspaces, and environment variables
+                \item Created an intuitive CLI interface for managing and executing API requests, similar to Postman's functionality
+                \item Tools Used: C++, libcurl, CMake
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            April 2024
+        }
+            \textbf{ScriptSync}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Pioneered software capable of providing translation for videos, allowing the content and audio to be interpreted in any desired language 
+                \item Prototyped in VIT Central Hackathon, where it secured 1st place 
+                \item Utilized computer vision libraries to interpret text, recognize language and convert to desired language output 
+                \item Tools Used: OpenCV, Python, ReactJS, FastAPI 
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \href{https://github.com/anshmehta7x/SimpleBlockchain}{Github Link}
+        }
+            \textbf{LocalBlockchain}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected a Proof-of-Work blockchain from the ground up, leveraging C++ and OOP principles for clean, maintainable code. 
+                \item Implemented mining algorithms, secure cryptographic hashing, and Merkle Trees for efficient transaction verification and integrity checks. 
+                \item Developed an intuitive web interface using Electron.js and React.js, enabling users to interact with and visualize blockchain data, including transactions, blocks, and hashes.  
+                \item Tools Used: C++, Visual Studio IDE, OpenSSL, Electron.js, React.js 
+            \end{highlights}
+        \end{onecolentry}
+
+\end{document}
