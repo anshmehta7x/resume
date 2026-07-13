@@ -15,7 +15,6 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{primaryColor}{RGB}{0, 0, 0}
 \usepackage{enumitem}
-\usepackage{fontawesome5}
 \usepackage{amsmath}
 \usepackage[
     pdftitle={Ansh Mehta's CV},
@@ -39,7 +38,6 @@
     \pdfgentounicode=1
     \usepackage[T1]{fontenc}
     \usepackage[utf8]{inputenc}
-    \usepackage{lmodern}
 \fi
 
 \usepackage{charter}
@@ -158,7 +156,7 @@
         \AND%
         \kern 5.0 pt%
         \mbox{\href{https://github.com/anshmehta7x}{github.com/anshmehta7x}}%
-                \kern 5.0 pt%
+        \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
         \mbox{\href{https://anshmehta.dev}{anshmehta.dev}}%
@@ -179,27 +177,31 @@
             \begin{highlights}
                 \item GPA: 9.10/10
                 \item Technical Head at IEEE-Computer Society
-                % \item \textbf{Relevant Coursework:} Structured and Object-Oriented Programming, Data Structures and Algorithms, Computer Architecture and Organization, Operating Systems, Database Management Systems, Computer Networks 
             \end{highlights}
         \end{onecolentry}
 
 \section{Technical Skills}
-\textbf{Languages:} Python, C, C++, Java, JavaScript, TypeScript, Solidity \\
-\textbf{Frameworks:} React.js, Next.js, TailwindCSS, Three.js, Node.js, FastAPI, Flask, OpenCV \\
-\textbf{Tools:} Git, Docker, Postman, Firebase, AWS \\
-\textbf{Databases:} SQL, MongoDB, DynamoDB \\
-\textbf{Blockchain:} Solidity,Hardhat, Foundry, Ethereum
+
+\textbf{Backend \& Languages:} Java, Python, C++, Spring Boot, FastAPI, Flask, Node.js, TypeScript, REST APIs, Microservices, Distributed Systems, OAuth 2.0, JWT \\
+
+\textbf{Cloud \& Infrastructure:} AWS (Lambda, Bedrock AgentCore, DynamoDB, CloudWatch, CDK), Docker, Git, Postman, System Design \\
+
+\textbf{Databases:} SQL, DynamoDB, MongoDB \\
+
+\textbf{AI / Agentic Systems:} Multi-Agent Orchestration, RAG, MCP, Memory Systems, Agent Evaluations, LangGraph, Strands \\
+
+\textbf{Frontend:} React.js, Next.js, TailwindCSS, JavaScript
 
     \section{Experience}
-    \begin{twocolentry}{Jan 2026 -- Current}
+    \begin{twocolentry}{Jan 2026 -- Jun 2026}
     \textbf{Software Development Engineer Intern}, Amazon -- Bengaluru, Karnataka
     \end{twocolentry}
     \vspace{0.20 cm}
     \begin{onecolentry}
     \begin{highlights}
-    \item Contributed to \textbf{Amazon Buddy}, a multi-agent orchestration platform on Amazon Pay that automates cross-team operational investigations using a hub-and-spoke architecture with Supervisor and Domain Specialist agents.
-    \item Engineered distributed agent workflows leveraging AWS Bedrock, Lambda, and cross-account IAM roles to query siloed data sources (Kibana, DynamoDB, CloudWatch) without centralizing sensitive data, achieving 98\% precision on UPI escalation resolution.
-    \item Built reusable CDK constructs for agent infrastructure (knowledge bases, action groups, data source accessors), reducing new automation setup from 8 weeks to 2 weeks and eliminating duplicate development effort across teams.
+    \item Contributed to \textbf{Amazon Buddy}, a multi-agent orchestration platform on Amazon Pay that automates cross-team operational investigations using a hub-and-spoke architecture with Supervisor and Domain Specialist agents to reduce resolution time from 10 minutes to 30 seconds.
+    \item Engineered distributed backend systems leveraging AWS Bedrock AgentCore, Java- and Python-based Lambda services to query siloed data sources (Kibana, DynamoDB, CloudWatch) and perform retrieval from Knowledge Bases without centralizing sensitive data, achieving 98\% precision on UPI customer escalation resolution.
+    \item Built a reusable CDK construct library for AWS agent infrastructure (knowledge bases, agent memory, data source accessors), reducing new agent onboarding setup by ~90\% and eliminating duplicate development effort across teams.
     \end{highlights}
     \vspace{0.10 cm}
     \end{onecolentry}
@@ -220,7 +222,7 @@
         \end{onecolentry}
 
 \section{Projects}
-        
+
 
 \begin{twocolentry}{
             Apr 2024
@@ -232,11 +234,11 @@
         \begin{onecolentry}
             \begin{highlights}
 \item Engineered a multithreaded video translation pipeline with GPU-accelerated OCR, intelligent frame difference detection, and OpenCV processing (thread-safe caching, fuzzy text matching, visual text replacement), reducing overhead by 60\%.
-\item Secured 1st place at VIT Central Hackathon with a production-ready system enabling real-time translation for 150+ languages and seamless visual text replacement. 
+\item Secured 1st place at VIT Central Hackathon with a production-ready system enabling real-time translation for 150+ languages and seamless visual text replacement.
                 \item \textbf{Technologies:} Python, OpenCV, EasyOCR, Threading, Google Translate API, FFmpeg
             \end{highlights}
         \end{onecolentry}
-    
+
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
@@ -248,7 +250,7 @@
 \vspace{0.10 cm}
 \begin{onecolentry}
     \begin{highlights}
-\item Architected a Proof-of-Work blockchain from scratch using C++17 and OOP principles, implementing SHA-256 mining, cryptographic hashing, Merkle Trees, and an HTTP server backend to process 100+ transactions with 35\% faster verification.
+\item Architected a Proof-of-Work blockchain backend from scratch using C++17 and OOP principles, implementing SHA-256 mining, cryptographic hashing, Merkle Trees, and an HTTP server to process 100+ transactions with 35\% faster verification.
 \item Developed an Electron.js/React.js frontend with 6 interactive components for blockchain data visualization
         \item \textbf{Technologies:} C++17, Visual Studio IDE, OpenSSL 3.0, HTTP/REST APIs, Electron.js, React.js
    \end{highlights}
