@@ -1,0 +1,31 @@
+name: Build resume PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - main.tex
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Rename PDF
+        run: mv main.pdf ansh-mehta-resume.pdf
+
+      - name: Commit rebuilt PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Rebuild resume PDF"
+          file_pattern: ansh-mehta-resume.pdf
